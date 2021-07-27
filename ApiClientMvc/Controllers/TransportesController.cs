@@ -22,7 +22,7 @@ namespace ApiClientMvc.Controllers
 		public TransportesController(IConfiguration configuration)
 		{
 			HttpClientHelper.Inicializar();
-			this.client = HttpClientHelper.Client;
+			client = HttpClientHelper.Client;
 			this.configuration = configuration;
 		}
 
