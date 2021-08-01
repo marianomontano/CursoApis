@@ -6,9 +6,9 @@ using WebApi.Models;
 
 namespace WebApi.EfCore
 {
-	public class EfCoreShippersRepository : EfCoreRepository<Shippers, NorthwindContext>
+	public class LoginRepository : BaseRepository<LoginUsuarios, NorthwindContext>
 	{
-		public EfCoreShippersRepository(NorthwindContext context) : base(context)
+		public LoginRepository(NorthwindContext context) : base(context)
 		{
 		}
 	}

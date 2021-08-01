@@ -5,12 +5,7 @@ using WebApi.Models;
 
 namespace WebApi.Data
 {
-	public interface IRepository<T> where T : class
+	public interface IRepository<T> : IReadRepository<T>, IWriteRepository<T> where T : class
 	{
-		Task<List<T>> GetAll();
-		Task<T> GetById(int id);
-		Task Add(T entity);
-		Task Update(T entity);
-		Task Delete(int id);
 	}
 }

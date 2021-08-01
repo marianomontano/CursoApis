@@ -47,14 +47,21 @@ namespace WebApi
 				};
 			});
 
+			//entity framework
 			services.AddDbContext<NorthwindContext>(options =>
 			{
 				options.UseSqlServer(Configuration.GetConnectionString("NorthWindDb"));
 			});
 
-			services.AddScoped<EfCoreShippersRepository>();
-			services.AddScoped<EfCoreRegionRepository>();
-			services.AddScoped<EfCoreLoginRepository>();
+			//repositorios
+			services.AddScoped<LoginRepository>();
+			services.AddScoped<ShippersRepository>();
+			services.AddScoped<RegionRepository>();
+			services.AddScoped<CategoriesRepository>();
+			services.AddScoped<SuppliersRepository>();
+			services.AddScoped<ProductsRepository>();
+			services.AddScoped<PricesViewModelRepository>();
+
 			services.AddControllers();
 		}
 

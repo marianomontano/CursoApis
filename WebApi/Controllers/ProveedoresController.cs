@@ -11,9 +11,9 @@ namespace WebApi.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
-	public class EnviosController : MiBaseController<Shippers, ShippersRepository>
+	public class ProveedoresController : MiBaseController<Suppliers, SuppliersRepository>
 	{
-		public EnviosController(ShippersRepository repository) : base(repository)
+		public ProveedoresController(SuppliersRepository repository) : base(repository)
 		{
 		}
 	}

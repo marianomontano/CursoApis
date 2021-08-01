@@ -11,9 +11,9 @@ namespace WebApi.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
-	public class RegionesController : MiBaseController<Region, EfCoreRegionRepository>
+	public class RegionesController : MiBaseController<Region, RegionRepository>
 	{
-		public RegionesController(EfCoreRegionRepository repository) : base(repository)
+		public RegionesController(RegionRepository repository) : base(repository)
 		{
 		}
 	}
